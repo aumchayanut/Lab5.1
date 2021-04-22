@@ -3204,45 +3204,46 @@ LOAD c:/st/stm32cubeide_1.6.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .igot.plt      0x000000002000000c        0x0 c:/st/stm32cubeide_1.6.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x000000002000000c                . = ALIGN (0x4)
 
-.bss            0x0000000020000010      0x1c0 load address 0x00000000080043d8
+.bss            0x0000000020000010      0x1e8 load address 0x00000000080043d8
                 0x0000000020000010                _sbss = .
                 0x0000000020000010                __bss_start__ = _sbss
  *(.bss)
  .bss           0x0000000020000010       0x1c c:/st/stm32cubeide_1.6.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
  .bss.capturedata
-                0x000000002000002c       0x20 Core/Src/main.o
+                0x000000002000002c       0x40 Core/Src/main.o
                 0x000000002000002c                capturedata
- .bss.DiffTime  0x000000002000004c       0x3c Core/Src/main.o
-                0x000000002000004c                DiffTime
- .bss.MeanTime  0x0000000020000088        0x4 Core/Src/main.o
-                0x0000000020000088                MeanTime
- .bss.Velocity  0x000000002000008c        0x4 Core/Src/main.o
-                0x000000002000008c                Velocity
- .bss._micros   0x0000000020000090        0x8 Core/Src/main.o
-                0x0000000020000090                _micros
+ .bss.DiffTime  0x000000002000006c       0x40 Core/Src/main.o
+                0x000000002000006c                DiffTime
+ .bss.MeanTime  0x00000000200000ac        0x4 Core/Src/main.o
+                0x00000000200000ac                MeanTime
+ .bss.Velocity  0x00000000200000b0        0x4 Core/Src/main.o
+                0x00000000200000b0                Velocity
+ *fill*         0x00000000200000b4        0x4 
+ .bss._micros   0x00000000200000b8        0x8 Core/Src/main.o
+                0x00000000200000b8                _micros
  *(COMMON)
- COMMON         0x0000000020000098      0x134 Core/Src/main.o
-                0x0000000020000098                hdma_tim2_ch1
-                0x00000000200000f8                htim5
-                0x0000000020000140                htim2
-                0x0000000020000188                huart2
- COMMON         0x00000000200001cc        0x4 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
-                0x00000000200001cc                uwTick
-                0x00000000200001d0                . = ALIGN (0x4)
-                0x00000000200001d0                _ebss = .
-                0x00000000200001d0                __bss_end__ = _ebss
+ COMMON         0x00000000200000c0      0x134 Core/Src/main.o
+                0x00000000200000c0                hdma_tim2_ch1
+                0x0000000020000120                htim5
+                0x0000000020000168                htim2
+                0x00000000200001b0                huart2
+ COMMON         0x00000000200001f4        0x4 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+                0x00000000200001f4                uwTick
+                0x00000000200001f8                . = ALIGN (0x4)
+                0x00000000200001f8                _ebss = .
+                0x00000000200001f8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200001d0      0x600 load address 0x00000000080043d8
-                0x00000000200001d0                . = ALIGN (0x8)
+                0x00000000200001f8      0x600 load address 0x00000000080043d8
+                0x00000000200001f8                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x00000000200001d0                PROVIDE (_end = .)
-                0x00000000200003d0                . = (. + _Min_Heap_Size)
- *fill*         0x00000000200001d0      0x200 
-                0x00000000200007d0                . = (. + _Min_Stack_Size)
- *fill*         0x00000000200003d0      0x400 
-                0x00000000200007d0                . = ALIGN (0x8)
+                0x00000000200001f8                PROVIDE (_end = .)
+                0x00000000200003f8                . = (. + _Min_Heap_Size)
+ *fill*         0x00000000200001f8      0x200 
+                0x00000000200007f8                . = (. + _Min_Stack_Size)
+ *fill*         0x00000000200003f8      0x400 
+                0x00000000200007f8                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
